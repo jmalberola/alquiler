@@ -4,7 +4,8 @@
   </div>
   <div class="panel-body">
     <div class="table-responsive">
-      <table class="table">
+      <table class="table"
+          *ngIf = "coches && coches.length">
         <thead>
           <tr>
             <th>Modelo</th>
