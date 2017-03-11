@@ -8,6 +8,7 @@
           *ngIf = "coches && coches.length">
         <thead>
           <tr>
+            <th>Foto</th>
             <th>Modelo</th>
             <th>Año</th>
             <th>km</th>
@@ -16,6 +17,9 @@
         </thead>
         <tbody>
           <tr *ngFor="let c of coches">
+            <td>
+              <img [src]="c.imagen" [style.width.px]="img_width">
+            </td>
             <td> {{c.modelo}} </td>
             <td> {{c.anyo}} </td>
             <td> {{c.km}} </td>

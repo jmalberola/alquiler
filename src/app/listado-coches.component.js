@@ -12,9 +12,11 @@ var core_1 = require('@angular/core');
 var ListadoCochesComponent = (function () {
     function ListadoCochesComponent() {
         this.titulo = "Listado de coches en alquiler";
+        this.img_width = 100;
         this.coches = [
             {
                 "id": 1,
+                "imagen": "/app/images/opel.png",
                 "modelo": "Opel Corsa",
                 "anyo": 2015,
                 "km": 35000,
@@ -22,6 +24,7 @@ var ListadoCochesComponent = (function () {
             },
             {
                 "id": 2,
+                "imagen": "/app/images/fiat.jpg",
                 "modelo": "Fiat Panda",
                 "anyo": 2014,
                 "km": 12000,
@@ -29,6 +32,7 @@ var ListadoCochesComponent = (function () {
             },
             {
                 "id": 3,
+                "imagen": "/app/images/hyundai.jpg",
                 "modelo": "Hyundai i30",
                 "anyo": 2013,
                 "km": 30000,
@@ -36,6 +40,7 @@ var ListadoCochesComponent = (function () {
             },
             {
                 "id": 4,
+                "imagen": "/app/images/citroen.jpg",
                 "modelo": "Citroen C3",
                 "anyo": 2014,
                 "km": 45000,
