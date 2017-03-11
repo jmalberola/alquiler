@@ -10,6 +10,7 @@ export class ListadoCochesComponent {
   titulo: string = "Listado de coches en alquiler";
   img_width: number = 100;
   mostrar_precio: boolean = true;
+  filtro_modelo: string = "todos";
   coches: any[] = [
   {
     "id": 1,

@@ -4,12 +4,17 @@
   </div>
   <div class="panel-body">
     <div class="row">
-    <div class="col-md-2">
+      <div class="col-md-2">Modelo: {{filtro_modelo}}</div>
+      <div class="col-md-2">
+        <input type="text"
+         [(ngModel)]="filtro_modelo"/>
+      </div>
+      <div class="col-md-2">
         <button class="btn btn-success" (click)="mostrar_ocultar_Precio()">
           {{mostrar_precio ? "Ocultar" : "Mostrar"}} precio
         </button>
+      </div>
     </div>
-  </div>
     <div class="table-responsive">
       <table class="table"
           *ngIf = "coches && coches.length">

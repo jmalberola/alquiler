@@ -14,6 +14,7 @@ var ListadoCochesComponent = (function () {
         this.titulo = "Listado de coches en alquiler";
         this.img_width = 100;
         this.mostrar_precio = true;
+        this.filtro_modelo = "todos";
         this.coches = [
             {
                 "id": 1,
