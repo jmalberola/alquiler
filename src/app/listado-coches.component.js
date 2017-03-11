@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var ListadoCochesComponent = (function () {
     function ListadoCochesComponent() {
+        this.titulo = "Listado de coches en alquiler";
     }
     ListadoCochesComponent = __decorate([
         core_1.Component({

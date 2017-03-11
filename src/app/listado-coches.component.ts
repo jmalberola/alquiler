@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 
 export class ListadoCochesComponent {
 
-
+  titulo: string = "Listado de coches en alquiler";
 
 }
