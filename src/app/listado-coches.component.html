@@ -3,6 +3,13 @@
     {{titulo}}
   </div>
   <div class="panel-body">
+    <div class="row">
+    <div class="col-md-2">
+        <button class="btn btn-success" (click)="mostrar_ocultar_Precio()">
+          {{mostrar_precio ? "Ocultar" : "Mostrar"}} precio
+        </button>
+    </div>
+  </div>
     <div class="table-responsive">
       <table class="table"
           *ngIf = "coches && coches.length">
@@ -23,7 +30,8 @@
             <td> {{c.modelo}} </td>
             <td> {{c.anyo}} </td>
             <td> {{c.km}} </td>
-            <td> {{c.precio}} </td>
+            <td *ngIf = "mostrar_precio == true"> {{c.precio}} </td>
+            <td *ngIf = "mostrar_precio == false">  </td>
           </tr>
         </tbody>
     </table>

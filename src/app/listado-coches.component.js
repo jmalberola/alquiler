@@ -13,6 +13,7 @@ var ListadoCochesComponent = (function () {
     function ListadoCochesComponent() {
         this.titulo = "Listado de coches en alquiler";
         this.img_width = 100;
+        this.mostrar_precio = true;
         this.coches = [
             {
                 "id": 1,
@@ -48,6 +49,9 @@ var ListadoCochesComponent = (function () {
             }
         ];
     }
+    ListadoCochesComponent.prototype.mostrar_ocultar_Precio = function () {
+        this.mostrar_precio = !this.mostrar_precio;
+    };
     ListadoCochesComponent = __decorate([
         core_1.Component({
             selector: 'listado-coches',

@@ -9,6 +9,7 @@ export class ListadoCochesComponent {
 
   titulo: string = "Listado de coches en alquiler";
   img_width: number = 100;
+  mostrar_precio: boolean = true;
   coches: any[] = [
   {
     "id": 1,
@@ -43,5 +44,9 @@ export class ListadoCochesComponent {
     "precio": 40,
   }
 ];
+
+mostrar_ocultar_Precio(): void{
+  this.mostrar_precio = !this.mostrar_precio;
+}
 
 }
