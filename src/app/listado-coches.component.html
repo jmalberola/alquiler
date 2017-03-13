@@ -32,10 +32,10 @@
             <td>
               <img [src]="c.imagen" [style.width.px]="img_width">
             </td>
-            <td> {{c.modelo}} </td>
+            <td> {{c.modelo | uppercase}} </td>
             <td> {{c.anyo}} </td>
             <td> {{c.km}} </td>
-            <td *ngIf = "mostrar_precio == true"> {{c.precio}} </td>
+            <td *ngIf = "mostrar_precio == true"> {{c.precio | currency:'EUR':true:'2.1-1'}} </td>
             <td *ngIf = "mostrar_precio == false">  </td>
           </tr>
         </tbody>

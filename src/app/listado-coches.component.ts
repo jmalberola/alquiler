@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ICoche } from './coche';
 
 @Component({
   selector: 'listado-coches',
@@ -11,7 +12,7 @@ export class ListadoCochesComponent {
   img_width: number = 100;
   mostrar_precio: boolean = true;
   filtro_modelo: string = "todos";
-  coches: any[] = [
+  coches: ICoche[] = [
   {
     "id": 1,
     "imagen": "/app/images/opel.png",
