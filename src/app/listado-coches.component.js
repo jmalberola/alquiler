@@ -9,57 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var coches_service_1 = require('./coches.service');
 var ListadoCochesComponent = (function () {
-    function ListadoCochesComponent() {
+    function ListadoCochesComponent(_cocheservice) {
+        this._cocheservice = _cocheservice;
         this.titulo = "Listado de coches en alquiler";
         this.mensaje = "";
         this.img_width = 100;
         this.mostrar_precio = true;
         this.filtro_modelo = "";
-        this.coches = [
-            {
-                "id": 1,
-                "imagen": "app/images/opel.png",
-                "modelo": "Opel Corsa",
-                "anyo": 2015,
-                "km": 35000,
-                "precio": 55,
-                "estrellas": 2.1,
-            },
-            {
-                "id": 2,
-                "imagen": "/app/images/fiat.jpg",
-                "modelo": "Fiat Panda",
-                "anyo": 2014,
-                "km": 12000,
-                "precio": 30,
-                "estrellas": 3.5,
-            },
-            {
-                "id": 3,
-                "imagen": "/app/images/hyundai.jpg",
-                "modelo": "Hyundai i30",
-                "anyo": 2013,
-                "km": 30000,
-                "precio": 45,
-                "estrellas": 4.2,
-            },
-            {
-                "id": 4,
-                "imagen": "/app/images/citroen.jpg",
-                "modelo": "Citroen C3",
-                "anyo": 2014,
-                "km": 45000,
-                "precio": 40,
-                "estrellas": 3.8,
-            }
-        ];
     }
     ListadoCochesComponent.prototype.mostrar_ocultar_Precio = function () {
         this.mostrar_precio = !this.mostrar_precio;
     };
     ListadoCochesComponent.prototype.ngOnInit = function () {
-        console.log('Dentro de OnInit');
+        this.coches = this._cocheservice.getCoches();
     };
     ListadoCochesComponent.prototype.onRatingClickado = function (m) {
         this.mensaje = "Recibido " + m.valor_rating;
@@ -69,7 +33,7 @@ var ListadoCochesComponent = (function () {
             selector: 'listado-coches',
             templateUrl: 'app/listado-coches.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [coches_service_1.CochesService])
     ], ListadoCochesComponent);
     return ListadoCochesComponent;
 }());
