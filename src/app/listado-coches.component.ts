@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ICoche } from './coche';
 
 @Component({
@@ -6,7 +6,7 @@ import { ICoche } from './coche';
   templateUrl: 'app/listado-coches.component.html'
 })
 
-export class ListadoCochesComponent {
+export class ListadoCochesComponent implements OnInit {
 
   titulo: string = "Listado de coches en alquiler";
   img_width: number = 100;
@@ -49,6 +49,10 @@ export class ListadoCochesComponent {
 
 mostrar_ocultar_Precio(): void{
   this.mostrar_precio = !this.mostrar_precio;
+}
+
+ngOnInit(): void{
+	console.log('Dentro de OnInit');
 }
 
 }

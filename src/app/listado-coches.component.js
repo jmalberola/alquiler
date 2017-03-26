@@ -53,6 +53,9 @@ var ListadoCochesComponent = (function () {
     ListadoCochesComponent.prototype.mostrar_ocultar_Precio = function () {
         this.mostrar_precio = !this.mostrar_precio;
     };
+    ListadoCochesComponent.prototype.ngOnInit = function () {
+        console.log('Dentro de OnInit');
+    };
     ListadoCochesComponent = __decorate([
         core_1.Component({
             selector: 'listado-coches',
