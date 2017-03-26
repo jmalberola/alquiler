@@ -5,4 +5,5 @@ export interface ICoche{
   anyo: number;
   km: number;
   precio: number;
+  estrellas: number;
 }

@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var ListadoCochesComponent = (function () {
     function ListadoCochesComponent() {
         this.titulo = "Listado de coches en alquiler";
+        this.mensaje = "";
         this.img_width = 100;
         this.mostrar_precio = true;
         this.filtro_modelo = "";
@@ -23,6 +24,7 @@ var ListadoCochesComponent = (function () {
                 "anyo": 2015,
                 "km": 35000,
                 "precio": 55,
+                "estrellas": 2.1,
             },
             {
                 "id": 2,
@@ -31,6 +33,7 @@ var ListadoCochesComponent = (function () {
                 "anyo": 2014,
                 "km": 12000,
                 "precio": 30,
+                "estrellas": 3.5,
             },
             {
                 "id": 3,
@@ -39,6 +42,7 @@ var ListadoCochesComponent = (function () {
                 "anyo": 2013,
                 "km": 30000,
                 "precio": 45,
+                "estrellas": 4.2,
             },
             {
                 "id": 4,
@@ -47,6 +51,7 @@ var ListadoCochesComponent = (function () {
                 "anyo": 2014,
                 "km": 45000,
                 "precio": 40,
+                "estrellas": 3.8,
             }
         ];
     }
@@ -55,6 +60,9 @@ var ListadoCochesComponent = (function () {
     };
     ListadoCochesComponent.prototype.ngOnInit = function () {
         console.log('Dentro de OnInit');
+    };
+    ListadoCochesComponent.prototype.onRatingClickado = function (m) {
+        this.mensaje = "Recibido " + m.valor_rating;
     };
     ListadoCochesComponent = __decorate([
         core_1.Component({

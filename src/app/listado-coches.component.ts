@@ -9,6 +9,7 @@ import { ICoche } from './coche';
 export class ListadoCochesComponent implements OnInit {
 
   titulo: string = "Listado de coches en alquiler";
+  mensaje: string = "";
   img_width: number = 100;
   mostrar_precio: boolean = true;
   filtro_modelo: string = "";
@@ -20,6 +21,7 @@ export class ListadoCochesComponent implements OnInit {
     "anyo": 2015,
     "km": 35000,
     "precio": 55,
+    "estrellas": 2.1,
   },
   {
     "id": 2,
@@ -28,6 +30,7 @@ export class ListadoCochesComponent implements OnInit {
     "anyo": 2014,
     "km": 12000,
     "precio": 30,
+    "estrellas": 3.5,
   },
   {
     "id": 3,
@@ -36,6 +39,7 @@ export class ListadoCochesComponent implements OnInit {
     "anyo": 2013,
     "km": 30000,
     "precio": 45,
+    "estrellas": 4.2,
   },
   {
     "id": 4,
@@ -44,6 +48,7 @@ export class ListadoCochesComponent implements OnInit {
     "anyo": 2014,
     "km": 45000,
     "precio": 40,
+    "estrellas": 3.8,
   }
 ];
 
@@ -53,6 +58,10 @@ mostrar_ocultar_Precio(): void{
 
 ngOnInit(): void{
 	console.log('Dentro de OnInit');
+}
+
+onRatingClickado(m: any){
+  this.mensaje = "Recibido "+m.valor_rating;
 }
 
 }

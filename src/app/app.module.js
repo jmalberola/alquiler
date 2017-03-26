@@ -14,13 +14,14 @@ var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
 var listado_coches_component_1 = require('./listado-coches.component');
 var filtrado_coches_pipe_1 = require('./filtrado-coches.pipe');
+var rating_star_component_1 = require('./rating-star.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-            declarations: [app_component_1.AppComponent, listado_coches_component_1.ListadoCochesComponent, filtrado_coches_pipe_1.FiltradoCoches],
+            declarations: [app_component_1.AppComponent, listado_coches_component_1.ListadoCochesComponent, filtrado_coches_pipe_1.FiltradoCoches, rating_star_component_1.RatingComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

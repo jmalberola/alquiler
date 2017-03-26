@@ -6,10 +6,11 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent }  from './app.component';
 import { ListadoCochesComponent }  from './listado-coches.component';
 import { FiltradoCoches }  from './filtrado-coches.pipe';
+import { RatingComponent }  from './rating-star.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent,  ListadoCochesComponent, FiltradoCoches],
+  declarations: [ AppComponent,  ListadoCochesComponent, FiltradoCoches, RatingComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

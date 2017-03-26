@@ -1,6 +1,7 @@
 <div class="panel panel-success">
   <div class="panel-heading">
     {{titulo}}
+    {{mensaje}}
   </div>
   <div class="panel-body">
     <div class="row">
@@ -24,7 +25,8 @@
             <th>Modelo</th>
             <th>Año</th>
             <th>km</th>
-            <th>precio/dia</th>
+            <th>Precio/dia</th>
+            <th>Valoración</th>
           </tr>
         </thead>
         <tbody>
@@ -37,6 +39,8 @@
             <td> {{c.km}} </td>
             <td *ngIf = "mostrar_precio == true"> {{c.precio | currency:'EUR':true:'2.1-1'}} </td>
             <td *ngIf = "mostrar_precio == false">  </td>
+            <td> <rating-star [rating]='c.estrellas'
+                              (rating_clicado)='onRatingClickado($event)'></rating-star> </td>
           </tr>
         </tbody>
     </table>
