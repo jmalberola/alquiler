@@ -5,10 +5,11 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent }  from './app.component';
 import { ListadoCochesComponent }  from './listado-coches.component';
+import { FiltradoCoches }  from './filtrado-coches.pipe';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent,  ListadoCochesComponent],
+  declarations: [ AppComponent,  ListadoCochesComponent, FiltradoCoches],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

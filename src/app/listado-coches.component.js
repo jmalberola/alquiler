@@ -14,11 +14,11 @@ var ListadoCochesComponent = (function () {
         this.titulo = "Listado de coches en alquiler";
         this.img_width = 100;
         this.mostrar_precio = true;
-        this.filtro_modelo = "todos";
+        this.filtro_modelo = "";
         this.coches = [
             {
                 "id": 1,
-                "imagen": "/app/images/opel.png",
+                "imagen": "app/images/opel.png",
                 "modelo": "Opel Corsa",
                 "anyo": 2015,
                 "km": 35000,

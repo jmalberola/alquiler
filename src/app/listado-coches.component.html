@@ -28,11 +28,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let c of coches">
+          <tr *ngFor="let c of coches | filtro_coches:filtro_modelo ">
             <td>
               <img [src]="c.imagen" [style.width.px]="img_width">
             </td>
-            <td> {{c.modelo | uppercase}} </td>
+            <td> {{c.modelo}} </td>
             <td> {{c.anyo}} </td>
             <td> {{c.km}} </td>
             <td *ngIf = "mostrar_precio == true"> {{c.precio | currency:'EUR':true:'2.1-1'}} </td>

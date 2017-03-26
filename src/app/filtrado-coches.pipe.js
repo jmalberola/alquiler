@@ -9,23 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var forms_1 = require('@angular/forms');
-var app_component_1 = require('./app.component');
-var listado_coches_component_1 = require('./listado-coches.component');
-var filtrado_coches_pipe_1 = require('./filtrado-coches.pipe');
-var AppModule = (function () {
-    function AppModule() {
+var FiltradoCoches = (function () {
+    function FiltradoCoches() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-            declarations: [app_component_1.AppComponent, listado_coches_component_1.ListadoCochesComponent, filtrado_coches_pipe_1.FiltradoCoches],
-            bootstrap: [app_component_1.AppComponent]
+    FiltradoCoches.prototype.transform = function (value, modelo_filtrado) {
+        return value.filter(function (coche) { return coche.modelo.toLocaleLowerCase().indexOf(modelo_filtrado) !== -1; });
+    };
+    FiltradoCoches = __decorate([
+        core_1.Pipe({
+            name: 'filtro_coches'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], FiltradoCoches);
+    return FiltradoCoches;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.FiltradoCoches = FiltradoCoches;
+//# sourceMappingURL=filtrado-coches.pipe.js.map

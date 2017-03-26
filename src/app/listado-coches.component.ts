@@ -11,11 +11,11 @@ export class ListadoCochesComponent {
   titulo: string = "Listado de coches en alquiler";
   img_width: number = 100;
   mostrar_precio: boolean = true;
-  filtro_modelo: string = "todos";
+  filtro_modelo: string = "";
   coches: ICoche[] = [
   {
     "id": 1,
-    "imagen": "/app/images/opel.png",
+    "imagen": "app/images/opel.png",
     "modelo": "Opel Corsa",
     "anyo": 2015,
     "km": 35000,
