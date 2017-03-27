@@ -23,7 +23,8 @@ var ListadoCochesComponent = (function () {
         this.mostrar_precio = !this.mostrar_precio;
     };
     ListadoCochesComponent.prototype.ngOnInit = function () {
-        this.coches = this._cocheservice.getCoches();
+        var _this = this;
+        this._cocheservice.getCoches().subscribe(function (c) { return _this.coches = c; });
     };
     ListadoCochesComponent.prototype.onRatingClickado = function (m) {
         this.mensaje = "Recibido " + m.valor_rating;
