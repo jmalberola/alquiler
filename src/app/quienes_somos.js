@@ -9,20 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var coches_service_1 = require('./coches.service');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.name = 'Angular';
+var QuienesSomos = (function () {
+    function QuienesSomos() {
     }
-    AppComponent = __decorate([
+    QuienesSomos = __decorate([
         core_1.Component({
-            selector: 'app-coches',
-            template: "\n  <div>\n  <nav class='navbar navbar-default'>\n    <div class='container-fluid'>\n      <ul class='nav navbar-nav'>\n\t       <li><a [routerLink]=\"['/listado']\">Home</a></li>\n\t       <li><a [routerLink]=\"['/listado']\">Listado de coches</a></li>\n         <li><a [routerLink]=\"['/quienes_somos']\">Qui\u00E9nes somos</a></li>\n      </ul>\n    </div>\n  </nav>\n  <div class='container'>\n  <router-outlet></router-outlet>\n  </div>\n</div>\n  ",
-            providers: [coches_service_1.CochesService]
+            templateUrl: 'app/quienes_somos.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], QuienesSomos);
+    return QuienesSomos;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.QuienesSomos = QuienesSomos;
+//# sourceMappingURL=quienes_somos.js.map

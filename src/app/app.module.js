@@ -12,17 +12,28 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
+var router_1 = require('@angular/router');
 var app_component_1 = require('./app.component');
 var listado_coches_component_1 = require('./listado-coches.component');
 var filtrado_coches_pipe_1 = require('./filtrado-coches.pipe');
 var rating_star_component_1 = require('./rating-star.component');
+var quienes_somos_component_1 = require('./quienes_somos.component');
+var detalle_component_1 = require('./detalle.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
-            declarations: [app_component_1.AppComponent, listado_coches_component_1.ListadoCochesComponent, filtrado_coches_pipe_1.FiltradoCoches, rating_star_component_1.RatingComponent],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule,
+                router_1.RouterModule.forRoot([
+                    { path: 'listado', component: listado_coches_component_1.ListadoCochesComponent },
+                    { path: 'listado/:id', component: detalle_component_1.Detalle },
+                    { path: 'quienes_somos', component: quienes_somos_component_1.QuienesSomos },
+                    { path: '', redirectTo: 'listado', pathMatch: 'full' },
+                    { path: '**', component: listado_coches_component_1.ListadoCochesComponent }
+                ])
+            ],
+            declarations: [app_component_1.AppComponent, listado_coches_component_1.ListadoCochesComponent, filtrado_coches_pipe_1.FiltradoCoches, rating_star_component_1.RatingComponent, quienes_somos_component_1.QuienesSomos, detalle_component_1.Detalle],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

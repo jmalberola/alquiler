@@ -34,7 +34,7 @@
             <td>
               <img [src]="c.imagen" [style.width.px]="img_width">
             </td>
-            <td> {{c.modelo}} </td>
+            <td><a [routerLink]="['/listado', c.id]"> {{c.modelo}} </a></td>
             <td> {{c.anyo}} </td>
             <td> {{c.km}} </td>
             <td *ngIf = "mostrar_precio == true"> {{c.precio | currency:'EUR':true:'2.1-1'}} </td>
